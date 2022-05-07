@@ -1,0 +1,1 @@
+stack = () => console.log("coffea");
