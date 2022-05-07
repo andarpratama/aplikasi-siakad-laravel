@@ -4,8 +4,8 @@
             <span class="align-middle">Aplikasi Siakad</span>
         </a>
 
-        <ul class="sidebar-nav">
-            <li class="sidebar-item active">
+        <ul class="sidebar-nav" style="padding-bottom: 200px">
+            <li class="sidebar-item">
                 <a class="sidebar-link" href="/">
                     <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
                 </a>
@@ -17,7 +17,8 @@
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="{{ route('identitas') }}">
-                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Identitas Sekolah</span>
+                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Identitas
+                        Sekolah</span>
                 </a>
             </li>
 
@@ -29,13 +30,15 @@
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="{{ route('admin.mapel') }}">
-                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Data Mata Pelajaran</span>
+                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Data Mata
+                        Pelajaran</span>
                 </a>
             </li>
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="{{ route('admin.tahun_ajaran') }}">
-                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Data Tahun Ajaran</span>
+                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Data Tahun
+                        Ajaran</span>
                 </a>
             </li>
 
@@ -64,7 +67,8 @@
             </li>
             <li class="sidebar-item">
                 <a class="sidebar-link" href="{{ route('admin.administrator') }}">
-                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Data Administrator</span>
+                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Data
+                        Administrator</span>
                 </a>
             </li>
 
@@ -72,7 +76,7 @@
                 Module Siswa
             </li>
 
-             <li class="sidebar-item">
+            <li class="sidebar-item">
                 <a class="sidebar-link" href="/">
                     <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Data Guru</span>
                 </a>
@@ -80,7 +84,8 @@
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="/">
-                    <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Data Mata Pelajaran</span>
+                    <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Data Mata
+                        Pelajaran</span>
                 </a>
             </li>
 
