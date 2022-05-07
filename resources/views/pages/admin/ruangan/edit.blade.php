@@ -8,8 +8,8 @@
                 aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"><a href="">Data {{ $title }}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Tambah Data {{ $title }}</li>
+                    <li class="breadcrumb-item active" aria-current="page">Data {{ $title }}</li>
+                    <li class="breadcrumb-item active" aria-current="page">Ubah Data {{ $title }}</li>
                 </ol>
             </nav>
 
@@ -17,15 +17,15 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between border-bottom">
-                            <h1 class="h2 mb-3">Tambah Data {{ $title }}</h1>
+                            <h1 class="h2 mb-3">Ubah Data {{ $title }}</h1>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('admin.ruangan.store') }}" method="POST">
+                            <form action="{{ route('admin.ruangan.update', $data->id) }}" method="POST">
                                 @csrf
                                 <div class="mb-3">
                                     <label for="kode_ruangan" class="form-label">Kode Ruangan</label>
                                     <input type="text" class="form-control @error('kode_ruangan') is-invalid @enderror"
-                                        id="kode_ruangan" name="kode_ruangan" value="{{ old('kode_ruangan') }}">
+                                        id="kode_ruangan" name="kode_ruangan" value="{{ $data->kode_ruangan }}" readonly>
                                     @error('kode_ruangan')
                                         <div class="text-danger">
                                             {{ $message }}
@@ -37,9 +37,13 @@
                                     <select name="status" class="form-select @error('status') is-invalid @enderror"
                                         aria-label="Default select example">
                                         <option selected disabled>Pilih Status</option>
-                                        <option value="terpakai">Terpakai</option>
-                                        <option value="belum terpakai">Belum Terpakai</option>
-                                        <option value="tidak aktif">Tidak Aktif</option>
+                                        <option value="terpakai" {{ $data->status == 'terpakai' ? 'selected' : '' }}>
+                                            Terpakai</option>
+                                        <option value="belum terpakai"
+                                            {{ $data->status == 'belum terpakai' ? 'selected' : '' }}>Belum Terpakai
+                                        </option>
+                                        <option value="tidak aktif"
+                                            {{ $data->status == 'tidak aktif' ? 'selected' : '' }}>Tidak Aktif</option>
                                     </select>
                                     @error('status')
                                         <div class="text-danger">
@@ -50,7 +54,7 @@
                                 <div class="mb-3">
                                     <label for="kapasitas" class="form-label">Kapasitas</label>
                                     <input type="number" class="form-control @error('kapasitas') is-invalid @enderror"
-                                        id="kapasitas" name="kapasitas" value="{{ old('kapasitas') }}">
+                                        id="kapasitas" name="kapasitas" value="{{ $data->kapasitas }}">
                                     @error('kapasitas')
                                         <div class="text-danger">
                                             {{ $message }}

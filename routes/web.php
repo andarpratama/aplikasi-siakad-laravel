@@ -44,6 +44,9 @@ Route::middleware(['auth'])->group(function () {
                 Route::get('/', [RuanganController::class, 'index'])->name('admin.ruangan');
                 Route::get('/tambah', [RuanganController::class, 'create'])->name('admin.ruangan.create');
                 Route::post('/simpan', [RuanganController::class, 'store'])->name('admin.ruangan.store');
+                Route::get('/edit/{id}', [RuanganController::class, 'edit'])->name('admin.ruangan.edit');
+                Route::post('/ubah/{id}', [RuanganController::class, 'update'])->name('admin.ruangan.update');
+                Route::delete('/hapus/{id}', [RuanganController::class, 'delete'])->name('admin.ruangan.delete');
             });
 
             Route::get('/mapel', [MapelController::class, 'index'])->name('admin.mapel');

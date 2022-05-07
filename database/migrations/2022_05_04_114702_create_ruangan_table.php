@@ -17,7 +17,7 @@ class CreateRuanganTable extends Migration
             $table->id();
             $table->char('kode_ruangan');
             $table->integer('kapasitas');
-            $table->boolean('status');
+            $table->enum('status', ['terpakai', 'belum terpakai', 'tidak aktif']);
             $table->timestamps();
         });
     }
